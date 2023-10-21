@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/store/visitor', [App\Http\Controllers\VisitorController::class, 'storeVisitor'])->name('storeVisitor');
+
+Route::delete('/delete/visitor/{id}', [App\Http\Controllers\VisitorController::class, 'destroyVisitor'])->name('destroyVisitor');

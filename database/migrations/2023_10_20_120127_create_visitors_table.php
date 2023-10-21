@@ -17,8 +17,10 @@ return new class extends Migration
             $table->string('nik');
             $table->text('address')->nullable();
             $table->string('phone');
-            $table->dateTime('tanggal_masuk');
-            $table->dateTime('tanggal_keluar')->nullable();
+            $table->date('tanggal_masuk')->nullable();
+            $table->time('jam_masuk')->nullable();
+            $table->date('tanggal_keluar')->nullable();
+            $table->time('jam_keluar')->nullable();
             $table->text('purpose')->nullable();
             $table->timestamps();
         });

@@ -15,6 +15,9 @@ class Visitor extends Model
         'nik',
         'phone',
         'tanggal_masuk',
-        'tanggal_keluar'
+        'jam_masuk',
+        'tanggal_keluar',
+        'jam_keluar',
+        'purpose'
     ];
 }
